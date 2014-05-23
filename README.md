@@ -10,13 +10,18 @@ The purpose of using WebSocket is to achieve realtime data synchronization bewte
 
 In this challenge, the app will talk to a fake socket-io server
 
+## Environment
+
+To save your time setting up the test environment. We've prepared a preconfigured online server as well as a simple debug client
+
+* Client: http://threepin.test.letsface.com
+* Server: http://socket-io-faker.test.letsface.com
+
+In your app, you may connect to the online server or setup one locally from [socket-io-faker](https://github.com/letsface/socket-io-faker). And play it with [ThreePin](https://github.com/letsface/ThreePin) to get familiar with its behaviour.
+
 ### fake server
 
-You may connect to an online faker server for testing. 
-
-Address: http://socket-io-faker.test.letsface.com
-
-It will respond to following operation.
+The fake server will respond to following operation.
 
 1. version: setup the api version
 2. login: login to the system
@@ -31,8 +36,6 @@ Please note that
 1. 'login' is allowed only after setting up the api 'version'
 2. 'create' and 'find' are allowed only after 'login'
 3. after 'logout', 'create' and 'find' will not be allowed
-
-You may also install it locally from [socket-io-faker](https://github.com/letsface/socket-io-faker). And play it with [ThreePin](https://github.com/letsface/ThreePin) to get familiar with its behaviour.
 
 ### to do
 
