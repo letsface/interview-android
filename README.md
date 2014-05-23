@@ -4,11 +4,7 @@
 
 Mockup an android app which can talk to WebSocket backend.
 
-The purpose of using WebSocket is to achieve realtime data synchronization bewteen the app and backend, e.g UI update when data changes.
-
-## Challenge
-
-In this challenge, the app will talk to a fake socket-io server
+The background of the challenge is to achieve realtime data synchronization bewteen the app and backend, e.g UI update when data changes.
 
 ## Environment
 
@@ -48,12 +44,43 @@ Create an android app which can
 5. fetch the guest list and display their name and attended states
 6. update attended state when receiving message from server
 
-See [sample messages](https://github.com/letsface/ThreePin/blob/master/threepin.json)
+### message format
 
-Please focus on the **communication** part rather than UI.
+All messages are emit and listened on event 'api'. The content of the message is as following
+
+```
+{
+  "op": "version",
+  "payload": "v1"
+},
+```
+
+See [sample messages](https://github.com/letsface/ThreePin/blob/master/threepin.json) for more.
+
+The server will respond in following format
+
+```
+{
+  "op": "out",
+  "payload": {
+    "version": "v1",
+    "methods": ["create", "currentUser", "find", "findOne", "login",
+      "logout", "remove", "sync", "update", "version"
+    ]
+  }
+}
+```
+
+See [answering rules](https://github.com/letsface/socket-io-faker/blob/master/test/fixtures/rules.json) of the fake server for details.
+
+## Note
+
+* On the fake server, only `op` name is checked, but you should encapsulate necessary data, pretending to talk to a real server.
+* Please focus on the **communication** part rather than UI.
 
 ## Links that may help
 
 * [Socket.IO](http://socket.io/)
+* [AndroidAsync](http://koush.com/AndroidAsync)
 * [Socket.IO java client](https://github.com/Gottox/socket.io-java-client)
 * [Connecting to a Socket.IO server from Android](http://nkzawa.tumblr.com/post/46850605422/connecting-to-a-socket-io-server-from-android)
