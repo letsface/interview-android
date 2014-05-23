@@ -52,7 +52,7 @@ All messages are emit and listened on event 'api'. The content of the message is
 {
   "op": "version",
   "payload": "v1"
-},
+}
 ```
 
 See [sample messages](https://github.com/letsface/ThreePin/blob/master/threepin.json) for more.
