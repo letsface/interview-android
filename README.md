@@ -12,7 +12,11 @@ In this challenge, the app will talk to a fake socket-io server
 
 ### fake server
 
-The fake server can be installed from [socket-io-faker](https://github.com/letsface/socket-io-faker). It will respond to following operation.
+You may connect to an online faker server for testing. 
+
+Address: http://socket-io-faker.test.letsface.com
+
+It will respond to following operation.
 
 1. version: setup the api version
 2. login: login to the system
@@ -28,7 +32,7 @@ Please note that
 2. 'create' and 'find' are allowed only after 'login'
 3. after 'logout', 'create' and 'find' will not be allowed
 
-You may play it with [ThreePin](https://github.com/letsface/ThreePin) to get familiar with its behaviour.
+You may also install it locally from [socket-io-faker](https://github.com/letsface/socket-io-faker). And play it with [ThreePin](https://github.com/letsface/ThreePin) to get familiar with its behaviour.
 
 ### to do
 
