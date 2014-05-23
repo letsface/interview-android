@@ -73,6 +73,15 @@ The server will respond in following format
 
 See [answering rules](https://github.com/letsface/socket-io-faker/blob/master/test/fixtures/rules.json) of the fake server for details.
 
+## Evaluation
+
+* Project will be evaluated on the basis of:
+ * fit with requirements
+ * datastructures and control structures used
+ * code conventions (comments, naming)
+ * unit tests provided
+ * code comments
+ 
 ## Note
 
 * On the fake server, only `op` name is checked, but you should encapsulate necessary data, pretending to talk to a real server.
